@@ -2,13 +2,18 @@ from flask import Flask, jsonify, render_template, request, redirect, url_for
 import subprocess
 import jwt
 import datetime
+import os
 from functools import wraps
+from dotenv import load_dotenv
+
+load_dotenv()
 
 app = Flask(__name__)
 
 # ─── CONFIG ───────────────────────────────────────────────
-SECRET_KEY = 'change_this_to_something_random_or_dont_idontcare'
-DASHBOARD_PASSWORD = 'CHANGE_THIS'
+SECRET_KEY = os.getenv('SECRET_KEY', 'fallback_dev_key_change_me')
+DASHBOARD_PASSWORD = os.getenv('DASHBOARD_PASSWORD', 'changeme')
+SERVER_ENDPOINT = os.environ.get('SERVER_ENDPOINT', 'YOUR_SERVER_IP:51820')
 TOKEN_EXPIRY_HOURS = 2
 # ──────────────────────────────────────────────────────────
 
@@ -238,7 +243,7 @@ DNS = 8.8.8.8
 
 [Peer]
 PublicKey = {server_public_key}
-Endpoint = YOUR_SERVER_IP:51820
+Endpoint = {SERVER_ENDPOINT}:51820
 AllowedIPs = 0.0.0.0/0
 PersistentKeepalive = 25"""
 
