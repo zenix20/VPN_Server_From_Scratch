@@ -92,10 +92,10 @@ WireGuard was chosen over OpenVPN for its modern cryptography (ChaCha20 + Poly13
 
 A pre-built image is available on Docker Hub:
 
-\`\`\`bash
+```bash
 docker pull zainabq055/vpn-dashboard:latest
 docker run -d -p 5000:5000 --env-file .env --cap-add=NET_ADMIN zainabq055/vpn-dashboard:latest
-\`\`\`
+```
 
 Note: this image packages the dashboard application only. It does not include a running WireGuard server — see THREAT_MODEL.md (T10) for details on this architectural boundary.
 
