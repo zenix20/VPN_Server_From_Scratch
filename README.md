@@ -2,7 +2,7 @@
 
 A self-hosted VPN server built from scratch using WireGuard, paired with a custom Flask web dashboard for live monitoring and peer management. Built as a hands-on cybersecurity project to understand VPN architecture, authentication, and secure secret handling — not just deploy a pre-built solution.
 
-**Full write-up with step-by-step explanations:** [Read the full tutorial on Medium](https://medium.com/@yourusername/REPLACE_WITH_YOUR_POST_LINK)
+**Full write-up with step-by-step explanations:** [Read the full tutorial on Medium](https://medium.com/@zainabqureshi620/building-my-own-vpn-server-from-scratch-a248a2a2554c)
 
 ## What This Does
 
