@@ -3,7 +3,7 @@
 
 This project implements a self-hosted VPN server using WireGuard, paired with a 
 custom Flask-based web dashboard for peer management. The system allows an 
-administrator to monitor connected peers, add new peers, and revoke access — 
+administrator to monitor connected peers, add new peers, and revoke access, 
 all through a browser interface protected by JWT authentication. The project 
 also includes a Dockerized version of the dashboard, published to Docker Hub.
 
