@@ -1,0 +1,7 @@
+*.key
+wg0.conf
+wg-client.conf
+.env
+__pycache__/
+*.pyc
+.git
