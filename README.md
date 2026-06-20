@@ -88,6 +88,17 @@ vpn-dashboard/
 
 WireGuard was chosen over OpenVPN for its modern cryptography (ChaCha20 + Poly1305) and significantly smaller codebase (~4,000 lines vs. ~100,000+), which reduces the overall attack surface while improving performance.
 
+## Docker
+
+A pre-built image is available on Docker Hub:
+
+\`\`\`bash
+docker pull zainabq055/vpn-dashboard:latest
+docker run -d -p 5000:5000 --env-file .env --cap-add=NET_ADMIN zainabq055/vpn-dashboard:latest
+\`\`\`
+
+Note: this image packages the dashboard application only. It does not include a running WireGuard server — see THREAT_MODEL.md (T10) for details on this architectural boundary.
+
 ## Author
 
 Zainab Qureshi
